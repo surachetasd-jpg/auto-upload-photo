@@ -1,73 +1,128 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auto Upload Drive</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="54qT49vQGVtLH_3auAfgTY4983D37RbxVNjG3zJW5K8" />
-  
+  <title>อัปโหลดรูปภาพอัตโนมัติ</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-      color: #1f2937;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      background-color: #f9fafb;
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --border: #334155;
     }
-    .card {
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      background: rgba(30, 41, 59, 0.7);
+    }
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
     }
     h1 {
-      color: #111827;
-      margin-top: 0;
+      margin: 0 0 6px;
+      font-size: 1.75rem;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin: 0;
+      font-size: 0.98rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-top: 20px;
     }
     h2 {
+      margin-top: 0;
       font-size: 1.2rem;
-      color: #374151;
-      margin-top: 24px;
+      color: var(--accent);
     }
     ul {
       padding-left: 20px;
+      margin: 10px 0 0;
     }
-    .footer {
-      margin-top: 32px;
-      padding-top: 16px;
-      border-top: 1px solid #e5e7eb;
-      font-size: 0.9rem;
-      color: #6b7280;
+    li {
+      margin-bottom: 8px;
+      color: var(--muted);
     }
     a {
-      color: #2563eb;
+      color: var(--accent);
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
+    .footer-links {
+      margin-top: 28px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Auto Upload Drive</h1>
-    <p>เครื่องมือช่วยอัปโหลดและจัดการไฟล์ไปยัง Google Photo ของคุณโดยอัตโนมัติ ช่วยลดขั้นตอนการทำงานซ้ำซ้อนและจัดระเบียบไฟล์ได้อย่างรวดเร็ว</p>
-
-    <h2>ฟีเจอร์หลัก</h2>
-    <ul>
-      <li>เชื่อมต่อกับบัญชี Google Drive ของผู้ใช้งานอย่างปลอดภัยผ่านมาตรฐาน OAuth 2.0</li>
-      <li>อัปโหลดไฟล์ไปยังโฟลเดอร์ที่กำหนดไว้โดยอัตโนมัติ</li>
-      <li>ผู้ใช้งานสามารถยกเลิกสิทธิ์การเชื่อมต่อได้ทุกเมื่อผ่านการตั้งค่าบัญชี Google</li>
-    </ul>
-
-    <h2>ติดต่อผู้พัฒนา</h2>
-    <p>หากมีข้อสงสัยหรือต้องการความช่วยเหลือ สามารถติดต่อได้ที่: <a href="mailto:surachet.abc@gmail.com">surachet.asd@gmail.com</a></p>
-
-    <div class="footer">
-      <a href="privacy.html">นโยบายความเป็นส่วนตัว (Privacy Policy)</a>
+  <header>
+    <div class="container" style="padding-top: 0; padding-bottom: 0;">
+      <h1>อัปโหลดรูปภาพอัตโนมัติ</h1>
+      <p class="subtitle">เครื่องมือช่วยอัปโหลดไฟล์รูปภาพที่ผู้ใช้งานเลือกขึ้นไปยังบัญชี Google Photos ของผู้ใช้งานเอง</p>
     </div>
-  </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>วัตถุประสงค์ของแอปพลิเคชัน</h2>
+      <p>
+        <strong>อัปโหลดรูปภาพอัตโนมัติ</strong> พัฒนาขึ้นเพื่อให้ผู้ใช้งานสามารถนำส่งไฟล์รูปภาพจากอุปกรณ์หรือโฟลเดอร์ที่ผู้ใช้งานกำหนด
+        ไปยังอัลบั้มบน Google Photos ของบัญชีผู้ใช้งานเองได้อย่างสะดวกและเป็นระเบียบ โดยผู้ใช้งานเป็นผู้ควบคุมการเริ่ม/หยุดการทำงาน
+        และเลือกปลายทางด้วยตนเอง หน้านี้เปิดให้เข้าชมข้อมูลสาธารณะได้โดยไม่ต้องเข้าสู่ระบบ
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>วิธีการทำงานและการใช้สิทธิ์ Google API</h2>
+      <ul>
+        <li>แอปจะเข้าถึงเฉพาะสิทธิ์ที่จำเป็นต่อการอัปโหลดรูปภาพตามคำสั่งของผู้ใช้งานไปยังบัญชี Google Photos ที่ผู้ใช้งานเลือก</li>
+        <li>ไม่มีการดึงข้อมูลส่วนตัวโดยไม่ได้รับอนุญาต ไม่มีการขายหรือส่งต่อข้อมูลให้บุคคลที่สาม</li>
+        <li>แอปพลิเคชันนี้ไม่สนับสนุนหรืออนุญาตให้ใช้ Google API สำหรับการสร้างหรือเผยแพร่ภาพที่ไม่ยินยอม (Non-Consensual Imagery / AI NCII) หรือเนื้อหาที่ละเมิดกฎหมายและข้อกำหนดการใช้บริการของ Google API</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>นโยบายความเป็นส่วนตัวและการติดต่อ</h2>
+      <p>
+        ดูรายละเอียดเกี่ยวกับการเก็บรวบรวม ใช้งาน และดูแลข้อมูลได้ที่หน้า
+        <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
+      </p>
+      <p style="margin-bottom: 0;">
+        หากมีข้อสงสัยหรือต้องการติดต่อผู้ดูแลระบบ สามารถติดต่อได้ที่:
+        <strong>surachetasd-jpg</strong> (ผ่านช่องทาง repository:
+        <a href="https://github.com/surachetasd-jpg/auto-upload-photo" target="_blank" rel="noopener noreferrer">
+          github.com/surachetasd-jpg/auto-upload-photo
+        </a>)
+      </p>
+    </section>
+
+    <div class="footer-links">
+      <a href="index.html">หน้าแรก</a>
+      <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
+    </div>
+  </main>
 </body>
 </html>
