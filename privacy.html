@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>นโยบายความเป็นส่วนตัว - Auto Upload Photo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>นโยบายความเป็นส่วนตัว - อัปโหลดรูปภาพอัตโนมัติ</title>
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.7;
-      color: #1f2937;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      background-color: #f9fafb;
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --border: #334155;
     }
-    .card {
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      background: rgba(30, 41, 59, 0.7);
+    }
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
     }
     h1 {
-      color: #111827;
-      margin-top: 0;
+      margin: 0 0 6px;
+      font-size: 1.65rem;
+    }
+    .updated {
+      color: var(--muted);
+      margin: 0;
+      font-size: 0.92rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-top: 20px;
     }
     h2 {
+      margin-top: 0;
       font-size: 1.15rem;
-      color: #111827;
-      margin-top: 24px;
+      color: var(--accent);
     }
-    .date {
-      font-size: 0.9rem;
-      color: #6b7280;
-      margin-bottom: 24px;
+    p, li {
+      color: var(--muted);
     }
-    .footer {
-      margin-top: 32px;
-      padding-top: 16px;
-      border-top: 1px solid #e5e7eb;
-      font-size: 0.9rem;
+    ul {
+      padding-left: 20px;
+      margin: 8px 0 0;
     }
     a {
-      color: #2563eb;
+      color: var(--accent);
       text-decoration: none;
     }
     a:hover {
@@ -50,30 +69,61 @@
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>นโยบายความเป็นส่วนตัว (Privacy Policy)</h1>
-    <div class="date">อัปเดตล่าสุด: 24 พฤศจิกายน 2026</div>
-
-    <p>แอปพลิเคชัน <strong>Auto Upload Photo</strong> ให้ความสำคัญกับความเป็นส่วนตัวและความปลอดภัยของข้อมูลผู้ใช้งาน เอกสารฉบับนี้อธิบายถึงวิธีที่เราเข้าถึง ใช้ และปกป้องข้อมูลของคุณเมื่อใช้งานบริการ</p>
-
-    <h2>1. ข้อมูลที่เราเข้าถึง (Data Accessed)</h2>
-    <p>เมื่อคุณเข้าสู่ระบบด้วยบัญชี Google แอปพลิเคชันจะขอสิทธิ์การเข้าถึง (Google OAuth Scopes) เพื่อใช้ในการสร้าง อัปโหลด และจัดการไฟล์ภายใน Google Drive ตามคำสั่งของผู้ใช้งานเท่านั้น เราจะไม่เข้าถึงข้อมูลส่วนตัวอื่นที่ไม่เกี่ยวข้องกับการทำงานของแอป</p>
-
-    <h2>2. การใช้ข้อมูล (How We Use Information)</h2>
-    <p>ข้อมูลและสิทธิ์การเข้าถึง Google Drive จะถูกนำไปใช้เพื่อวัตถุประสงค์เดียว คือการส่งและอัปโหลดไฟล์ไปยังพื้นที่จัดเก็บ Google Drive ของคุณโดยอัตโนมัติ แอปพลิเคชันไม่มีการเก็บสำเนาไฟล์ของคุณไว้บนเซิร์ฟเวอร์ภายนอก</p>
-
-    <h2>3. การเปิดเผยข้อมูลต่อบุคคลที่สาม (Data Sharing)</h2>
-    <p>เราไม่มีนโยบายขาย แลกเปลี่ยน หรือเปิดเผยข้อมูลส่วนบุคคลและข้อมูลใน Google Drive ของคุณให้แก่บุคคลที่สาม รวมถึงไม่นำข้อมูลไปใช้เพื่อการโฆษณา</p>
-
-    <h2>4. การปฏิบัติตามนโยบายข้อมูลผู้ใช้ของ Google (Google API Services User Data Policy)</h2>
-    <p>การใช้และการโอนข้อมูลที่ได้รับจาก Google APIs ของแอปพลิเคชัน Auto Upload Drive จะปฏิบัติตาม <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a> รวมถึงข้อกำหนดเรื่องการใช้งานแบบจำกัด (Limited Use requirements) อย่างเคร่งครัด</p>
-
-    <h2>5. การยกเลิกสิทธิ์และติดต่อเรา (Revoking Access & Contact)</h2>
-    <p>คุณสามารถยกเลิกสิทธิ์การเข้าถึงของแอปพลิเคชันได้ตลอดเวลาที่หน้า <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">การตั้งค่าความปลอดภัยของบัญชี Google</a> หากมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัว โปรดติดต่อ: <a href="mailto:surachet.abc@gmail.com">surachet.abc@gmail.com</a></p>
-
-    <div class="footer">
-      <a href="index.html">&larr; กลับสู่หน้าแรก (Home)</a>
+  <header>
+    <div class="container" style="padding-top: 0; padding-bottom: 0;">
+      <h1>นโยบายความเป็นส่วนตัว — อัปโหลดรูปภาพอัตโนมัติ</h1>
+      <p class="updated">อัปเดตล่าสุด: พฤศจิกายน 2026</p>
     </div>
-  </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>1. ข้อมูลที่เราเข้าถึงและเก็บรวบรวม</h2>
+      <p>
+        แอปพลิเคชัน <strong>อัปโหลดรูปภาพอัตโนมัติ</strong> ใช้การยืนยันตัวตนผ่าน Google OAuth เพื่ออัปโหลดไฟล์รูปภาพที่ผู้ใช้งานเลือก
+        ไปยังบัญชี Google Photos ของผู้ใช้งานเอง โดยอาจเข้าถึงข้อมูลพื้นฐานของบัญชี (เช่น อีเมลสำหรับแสดงสถานะบัญชีที่กำลังใช้งาน)
+        และสิทธิ์การอัปโหลดสื่อไปยัง Google Photos ตามที่ผู้ใช้งานอนุญาต
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>2. การใช้งานข้อมูล</h2>
+      <ul>
+        <li>ใช้เพื่ออัปโหลดไฟล์รูปภาพที่ผู้ใช้งานกำหนดไปยังอัลบั้มหรือคลัง Google Photos ของผู้ใช้งานเท่านั้น</li>
+        <li>ใช้เพื่อแสดงสถานะการเชื่อมต่อบัญชีและการอัปโหลดให้ผู้ใช้งานตรวจสอบได้</li>
+        <li>ไม่นำข้อมูลหรือรูปภาพของผู้ใช้งานไปใช้ฝึกฝนโมเดล AI โดยไม่ได้รับอนุญาต และไม่อนุญาตให้ใช้บริการนี้เพื่อสร้างหรือเผยแพร่ภาพที่ไม่ยินยอม (AI NCII)</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>3. การเปิดเผยหรือแบ่งปันข้อมูล</h2>
+      <p>
+        เราไม่ขาย ให้เช่า หรือส่งต่อข้อมูลส่วนบุคคลหรือรูปภาพของผู้ใช้งานให้แก่บุคคลที่สาม ยกเว้นกรณีที่ผู้ใช้งานสั่งให้ส่งออกหรือแชร์ข้อมูลด้วยตนเอง
+        หรือเป็นไปตามที่กฎหมายกำหนด
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>4. การเก็บรักษาและการลบข้อมูล</h2>
+      <p>
+        ไฟล์รูปภาพต้นฉบับอยู่ในความดูแลของผู้ใช้งานบนอุปกรณ์และบัญชี Google ของผู้ใช้งานเอง ผู้ใช้งานสามารถเพิกถอนสิทธิ์การเข้าถึงของแอปได้ทุกเมื่อ
+        ผ่านหน้าจัดการสิทธิ์บัญชี Google (Google Account Permissions) และสามารถลบไฟล์หรืออัลบั้มใน Google Photos ได้ด้วยตนเอง
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>5. ช่องทางติดต่อ</h2>
+      <p style="margin-bottom: 0;">
+        หากมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัวนี้ สามารถติดต่อผู้พัฒนาได้ที่โปรเจกต์
+        <a href="https://github.com/surachetasd-jpg/auto-upload-photo" target="_blank" rel="noopener noreferrer">
+          github.com/surachetasd-jpg/auto-upload-photo
+        </a>
+      </p>
+    </section>
+
+    <p style="margin-top: 24px;">
+      <a href="index.html">← กลับไปหน้าแรกของแอปอัปโหลดรูปภาพอัตโนมัติ</a>
+    </p>
+  </main>
 </body>
 </html>
